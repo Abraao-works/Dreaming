@@ -41,3 +41,33 @@ function startDownload(progressId, button) {
     progressBar.style.width = '0'; // Reseta a barra de progresso
     alert("Download cancelado.");
   }
+    
+  function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var output = document.getElementById('profileImage');
+        output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+}
+
+
+function saveProfile() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    if (username && password) {
+        alert("Perfil salvo com sucesso!\nUsuário: " + username);
+    } else if (username) {
+        alert("Nome de usuário alterado para: " + username);
+    } else {
+        alert("Por favor, preencha os campos necessários.");
+    }
+}
+
+
+function logout() {
+    alert("Você foi deslogado.");
+    
+    window.location.href = 'login.html'; 
+}
