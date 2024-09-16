@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="shortcut icon" href="2-removebg-preview.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downloads - Dreaming</title>
+  <link rel="stylesheet" href="pagdownload.css">
+</head>
+<body>
+   </head>
+   <nav class="barranav">
+    <div class="nav-logo">
+        <img src="imagens/2-removebg-preview 1.png" alt="dreaminglogo">
+    </div>
+    <ul class="nav-list">
+        <li class="tag">Menu</li>
+        <li><a href=""><img src="https://www.unhcr.org/spotlight/wp-content/uploads/sites/55/2021/05/Icon-test-House-white.png" alt="Início"> Home</a></li>
+        <li><a href="#services"><img src="https://www.pngkey.com/png/full/87-872187_lupa-search-icon-white-png.png" alt="discover"> Discover</a></li>
+
+        <li class="tag">Library</li>
+        <li><a href="recent.pag"><img src="https://static-00.iconduck.com/assets.00/recent-icon-2048x1853-pffurvy9.png" alt="recent"> Recent</a></li>
+        <li><a href=""><img src="imagens/Top Rated.png" alt="">Top Rated</a></li>
+        <li><a href=""><img src="imagens/Downloaded.png" alt="">Downloaded</a></li>
+        <li><a href=""><img src="imagens/Playlists.png" alt="">Playlists</a></li>
+        <li><a href=""><img src="imagens/Watchlist.png" alt="">Watchlist</a></li>
+
+        <li class="tag">General</li>
+        <li><a href=""><img src="imagens/Settings.png" alt="">Settings</a></li>
+        <li class="logout"><a href=""><img src="imagens/Log Out.png" alt="">Logtout</a></li>
+        </a>
+    </ul>
+</nav>
+
+  <div class="download-section">
+    <h1>Meus Downloads</h1>
+    
+    <div class="download-item">
+      <div class="download-info">
+        <div class="download-title"><img src="thecrown.jfif" alt="">The Crown: S1 E1</div>
+        <div class="download-progress">
+          <div class="download-progress-bar" id="progress1"></div>
+        </div>
+      </div>
+      <div class="download-controls">
+        <button class="download-button" onclick="startDownload('progress1', this)">Assistir</button>
+        <button class="download-button cancel-button" onclick="cancelDownload('progress1')">Excluir</button>
+      </div>
+    </div>
+
+    <div class="download-item">
+      <div class="download-info">
+        <div class="download-title"><img src="stranger things.jfif" alt="">Stranger things: S2 E4</div>
+        <div class="download-progress">
+          <div class="download-progress-bar" id="progress2"></div>
+        </div>
+      </div>
+      <div class="download-controls">
+        <button class="download-button" onclick="startDownload('progress2', this)">Assistir</button>
+        <button class="download-button cancel-button" onclick="cancelDownload('progress2')">Excluir</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="java.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #16181e;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .download-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #21242d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #00b9a1;
+  }
+
+  .download-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #080808;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .download-info {
+    flex: 1;
+  }
+
+  .download-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00b9a1;
+  }
+
+  .download-progress {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+
+  .download-progress-bar {
+    width: 0;
+    height: 8px;
+    background-color: #ff0505;
+  }
+
+  .download-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .download-button:hover {
+    background-color: #45a049;
+  }
+
+  .cancel-button {
+    background-color: #f44336;
+  }
+
+  .cancel-button:hover {
+    background-color: #d32f2f;
+  }
+  /*barra de navegação esquerda */
+.barranav {
+    position: fixed; /* Fixa a barra na posição */
+    top: 0; /* Alinha ao topo da página */
+    left: 0; /* Alinha à esquerda da página */
+    width: 200px; /* Largura da barra de navegação */
+    height: 100vh; /* Altura total da tela */
+    background-color: #21242D; /* Cor de fundo da barra */
+    padding: 20px 0; /* Espaçamento interno */
+    overflow-y: auto;
+}
+.nav-list{
+    list-style: none;
+    padding: 0;
+}
+.nav-list {
+    list-style: none; /* Remove a lista padrão */
+    padding: 0; /* Remove o padding padrão */
+}
+
+.nav-list li {
+    margin-bottom: 20px; /* Espaço entre os itens da lista */
+}
+
+.nav-list a {
+    display: flex; /* Exibe o ícone e o texto em linha */
+    align-items: center; /* Alinha verticalmente */
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 16px; /* Tamanho da fonte dos links */
+    padding: 10px 20px; /* Espaçamento interno dos links */
+    border-radius: 5px; /* Borda arredondada */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+.nav-list img {
+    width: 20px; /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+.nav-list a:hover {
+    background-color: #00B9AE; /* Cor de fundo ao passar o mouse */
+    color: #f1f1f1; /* Cor do texto ao passar o mouse */
+}
+
+.nav-list a:hover img {
+    filter: brightness(0) invert(1); /* Altera a cor da imagem ao passar o mouse */
+}
+
+.tag{
+    align-items: center;
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    padding: 10px 20px;
+}
+.logout a{
+    color: red;
+    text-decoration: none;
+}
+.nav-logo img{
+    max-width: 250px;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0px;
+}

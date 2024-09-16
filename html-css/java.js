@@ -19,3 +19,25 @@ function toggleAnswer(answerId) {
         answer.style.display = 'block';
     }
 }
+function startDownload(progressId, button) {
+    let progressBar = document.getElementById(progressId);
+    let width = 0;
+    button.disabled = true; // Desativa o botão enquanto o download está ativo
+
+    let interval = setInterval(function() {
+      if (width >= 100) {
+        clearInterval(interval);
+        button.innerHTML = "Concluído";
+        button.style.backgroundColor = "#4CAF50";
+      } else {
+        width++;
+        progressBar.style.width = width + '%';
+      }
+    }, 100); // Simula o progresso de download
+  }
+
+  function cancelDownload(progressId) {
+    let progressBar = document.getElementById(progressId);
+    progressBar.style.width = '0'; // Reseta a barra de progresso
+    alert("Download cancelado.");
+  }
