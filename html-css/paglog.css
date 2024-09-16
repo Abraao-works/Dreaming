@@ -87,3 +87,6 @@ h2 {
 .social-links a:hover {
     color: #ccc;
 }
+* a{
+    text-decoration: none;
+}

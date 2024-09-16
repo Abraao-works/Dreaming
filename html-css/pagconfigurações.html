@@ -1,114 +1,288 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dreaming-Configurações</title>
-    <link rel="stylesheet" href="pgplaylist2.css">
-    <!--Barra de navegação vertical esquerda--> 
-    <nav class="barranav">
-        <div class="nav-logo">
-            <img src="imagens/2-removebg-preview 1.png" alt="dreaminglogo">
-        </div>
-        <ul class="nav-list">
-            <li class="tag">Menu</li>
-            <li><a href="index.html" rel="prev"><img
-                        src="https://www.unhcr.org/spotlight/wp-content/uploads/sites/55/2021/05/Icon-test-House-white.png"
-                        alt="Início"> Home</a></li>
-            <li><a href="#services"><img
-                        src="https://www.pngkey.com/png/full/87-872187_lupa-search-icon-white-png.png"
-                        alt="discover"> Discover</a></li>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações Dreaming</title>
+  <link rel="shortcut icon" href="2-removebg-preview.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #16181e;
+      color: rgb(250, 250, 250);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
 
-            <li class="tag">Library</li>
-            <li><a href="recent.pag"><img
-                        src="https://static-00.iconduck.com/assets.00/recent-icon-2048x1853-pffurvy9.png"
-                        alt="recent"> Recent</a></li>
-            <li><a href="pagtoprated.html"><img src="imagens/Top Rated.png" alt="toprated" rel="next">Top Rated</a></li>
-            <li><a href=""><img src="imagens/Downloaded.png" alt="">Downloaded</a></li>
-            <li><a href=""><img src="imagens/Playlists.png" alt="">Playlists</a></li>
-            <li><a href="pagwatchlist.html"><img src="imagens/Watchlist.png" alt="">Watchlist</a></li>
+    .barranav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      background-color: #21242D;
+      padding: 20px 0;
+      overflow-y: auto;
+    }
 
-            <li class="tag">General</li>
-            <li><a href="pagconfigurações.html"><img src="imagens/Settings.png" alt="">Settings</a></li>
-            <li class="logout"><a href=""><img src="imagens/Log Out.png" alt="">Logtout</a></li>
-            </a>
+    .nav-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav-list li {
+      margin-bottom: 20px;
+    }
+
+    .nav-list a {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-list img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .nav-list a:hover {
+      background-color: #00B9AE;
+      color: #f1f1f1;
+    }
+
+    .nav-list a:hover img {
+      filter: brightness(0) invert(1);
+    }
+
+    .tag {
+      align-items: center;
+      color: #ffffff;
+      font-size: 16px;
+      display: flex;
+      padding: 10px 20px;
+    }
+
+    .logout a {
+      color: red;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      margin-bottom: 0px;
+    }
+
+    .settings-container {
+      margin-left: 220px;
+      padding: 20px;
+      max-width: 600px;
+    }
+
+    .settings-container h1 {
+      margin-bottom: 10px;
+    }
+
+    .setting-section {
+      margin-bottom: 20px;
+    }
+
+    .setting-section h2 {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    select, input[type="password"] {
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #00B9AE;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #008c7e;
+    }
+    /* Imagem de perfil */
+.profile {
+    position: absolute;
+    top: 10px;
+    right: 50px; 
+    cursor: pointer;
+    display: inline-block;
+    z-index: 1000;
+}
+.profile-img {
+  position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    position: absolute ;
+    z-index: 1000;
+}
+/* Menu suspenso */
+.profile-menu {
+  position: fixed;
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 10px;
+    width: 120px;
+    z-index: 1000;
+    left: -100px;
+}
+
+.profile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-menu ul li {
+    padding: 10px;
+}
+
+.profile-menu ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.profile-menu ul li a:hover {
+    background-color: #00B9AE;
+    border-radius: 5px;
+}
+  </style>
+   <!--Parte do perfil do usuário-->
+   <div class="profile">
+    <img src="https://cdn-icons-png.flaticon.com/512/5953/5953496.png" alt="Perfil" class="profile-img"
+        id="profile-button">
+    <div class="profile-menu" id="profile-menu">
+        <ul>
+            <li><a href="gerenciarperfil.html">Gerenciar Contas</a></li>
+            <li><a href="#">Minha Conta</a></li>
+            <li><a href="pagajuda.html">Ajuda</a></li>
         </ul>
-    </nav>
-
-    <!--Parte do perfil do usuário-->
-    <div class="profile">
-        <img src="https://cdn-icons-png.flaticon.com/512/5953/5953496.png" alt="Perfil" class="profile-img"
-            id="profile-button">
-        <div class="profile-menu" id="profile-menu">
-            <ul>
-                <li><a href="gerenciarperfil.html">Gerenciar Contas</a></li>
-                <li><a href="#">Minha Conta</a></li>
-                <li><a href="pagajuda.html">Ajuda</a></li>
-            </ul>
-        </div>
     </div>
-
+</div>
 </head>
 <body>
-    <!--Configurações-->
-    <div class="container-config">
-        <h1>Configurações de Conta</h1>
-        <div class="config-section"><a href="">
-            <h2>Geral</h2>
-        </a></div>
-        <div class="config-section"><a href="">
-            <h2>Segurança</h2>
-        </a></div>
 
-        <!-- Preferencias de Vídeo -->
-        <div class="config-section">
-            <h2>Preferências de Vídeo</h2>
-            <label for="quality">Qualidade de Vídeo:</label>
-            <select id="quality">
-                <option value="auto">Automático</option>
-                <option value="1080p">1080p (HD)</option>
-                <option value="720p">720p</option>
-                <option value="480p">480p</option>
-            </select>
-        </div>
-
-        <!-- Idioma -->
-        <div class="config-section">
-            <h2>Configurações de Idioma</h2>
-            <label for="language">Idioma do conteúdo:</label>
-            <select id="language">
-                <option value="pt-BR">Português (Brasil)</option>
-                <option value="en-US">Inglês (EUA)</option>
-                <option value="es-ES">Espanhol</option>
-                <option value="fr-FR">Francês</option>
-            </select>
-        </div>
-
-        <!-- Notificaçoes -->
-        <div class="config-section">
-            <h2>Configurações de Notificações</h2>
-            <label>
-                <input type="checkbox" id="email-notifications">
-                Receber notificações por e-mail
-            </label>
-            <label>
-                <input type="checkbox" id="push-notifications">
-                Receber notificações no aplicativo
-            </label>
-        </div>
-
-        <!-- Controle dos Pais -->
-        <div class="config-section">
-            <h2>Controle dos Pais</h2>
-            <label for="parental-control">Habilitar controle dos pais:</label>
-            <input type="checkbox" id="parental-control">
-        </div>
-
-        <!-- Botao de salvar -->
-        <div class="config-section">
-            <button type="button">Salvar Configurações</button>
-        </div>
+  <!--Barra de navegação vertical esquerda-->
+  <nav class="barranav">
+    <div class="nav-logo">
+      <img src="imagens/2-removebg-preview 1.png" alt="dreaminglogo">
     </div>
-<script src="java.js"></script>
+    <ul class="nav-list">
+      <li class="tag">Menu</li>
+      <li><a href=""><img src="https://www.unhcr.org/spotlight/wp-content/uploads/sites/55/2021/05/Icon-test-House-white.png" alt="Início"> Home</a></li>
+      <li><a href="#services"><img src="https://www.pngkey.com/png/full/87-872187_lupa-search-icon-white-png.png" alt="discover"> Discover</a></li>
+      <li class="tag">Library</li>
+      <li><a href="recent.pag"><img src="https://static-00.iconduck.com/assets.00/recent-icon-2048x1853-pffurvy9.png" alt="recent"> Recent</a></li>
+      <li><a href=""><img src="imagens/Top Rated.png" alt="">Top Rated</a></li>
+      <li><a href=""><img src="imagens/Downloaded.png" alt="">Downloaded</a></li>
+      <li><a href=""><img src="imagens/Playlists.png" alt="">Playlists</a></li>
+      <li><a href=""><img src="imagens/Watchlist.png" alt="">Watchlist</a></li>
+      <li class="tag">General</li>
+      <li><a href=""><img src="imagens/Settings.png" alt="">Settings</a></li>
+      <li class="logout"><a href=""><img src="imagens/Log Out.png" alt="">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo de configurações -->
+  <div class="settings-container">
+    <h1>Configurações</h1>
+    <hr>
+    <section class="setting-section">
+      <h2>Preferências de Vídeo</h2>
+      <label for="quality">Qualidade de Vídeo:</label>
+      <select id="quality">
+        <option value="auto">Automático</option>
+        <option value="1080p">1080p (Full HD)</option>
+        <option value="720p">720p (HD)</option>
+        <option value="480p">480p (SD)</option>
+      </select>
+      <label for="theme">Tema do Player:</label>
+      <select id="theme">
+        <option value="light">Claro</option>
+        <option value="dark">Escuro</option>
+      </select>
+    </section>
+
+    <section class="setting-section">
+      <h2>Preferências de Áudio</h2>
+      <label for="audio-lang">Idioma do Áudio:</label>
+      <select id="audio-lang">
+        <option value="pt">Português</option>
+        <option value="en">Inglês</option>
+        <option value="es">Espanhol</option>
+        <option value="fr">Francês</option>
+      </select>
+      <label>
+        <input type="checkbox" id="enable-subtitles"> Habilitar Legendas
+      </label>
+      <label for="sub-lang" class="sub-options">
+        Idioma das Legendas:
+        <select id="sub-lang" disabled>
+          <option value="pt">Português</option>
+          <option value="en">Inglês</option>
+          <option value="es">Espanhol</option>
+          <option value="fr">Francês</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="setting-section">
+      <h2>Notificações</h2>
+      <label>
+        <input type="checkbox" id="email-notifications"> Receber notificações por e-mail
+      </label>
+      <label>
+        <input type="checkbox" id="push-notifications"> Receber notificações no navegador
+      </label>
+    </section>
+
+    <section class="setting-section">
+      <h2>Controle de Pais</h2>
+      <label>
+        <input type="checkbox" id="enable-parental-control"> Habilitar Controle de Pais
+      </label>
+      <div class="parental-control-options" id="parental-options" style="display: none;">
+        <label for="pin">Definir PIN:</label>
+        <input type="password" id="pin" maxlength="4" placeholder="****">
+      </div>
+    </section>
+
+    <button id="save-button">Salvar Configurações</button>
+  </div>
+
+  <script src="java.js"></script>
 </body>
 </html>
