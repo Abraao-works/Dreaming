@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ajuda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .faq-section {
+            margin-bottom: 30px;
+        }
+
+        .faq-question {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .faq-answer {
+            display: none;
+            background-color: #f1f1f1;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .reclamacao-section {
+            margin-top: 30px;
+        }
+
+        label {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            display: block;
+            color: #555;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin-bottom: 20px;
+        }
+
+        .form-actions {
+            text-align: right;
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Página de Ajuda</h1>
+
+        <!-- Perguntas Frequentes -->
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(1)">O que é o serviço?</div>
+            <div class="faq-answer" id="answer1">Nosso serviço oferece uma plataforma de streaming com vários filmes e séries para você assistir onde e quando quiser.</div>
+
+            <div class="faq-question" onclick="toggleAnswer(2)">Como eu faço para alterar meu plano?</div>
+            <div class="faq-answer" id="answer2">Você pode alterar seu plano acessando a página de configurações do perfil e escolhendo um novo plano na seção de assinaturas.</div>
+
+            <div class="faq-question" onclick="toggleAnswer(3)">Quais formas de pagamento são aceitas?</div>
+            <div class="faq-answer" id="answer3">Aceitamos pagamentos com cartão de crédito, débito e também através de boleto bancário.</div>
+
+            <div class="faq-question" onclick="toggleAnswer(4)">Como posso cancelar minha assinatura?</div>
+            <div class="faq-answer" id="answer4">Para cancelar sua assinatura, acesse a página de configurações do perfil e selecione a opção de cancelamento na seção de gerenciamento de assinaturas.</div>
+
+            <div class="faq-question" onclick="toggleAnswer(5)">Posso usar o serviço em vários dispositivos?</div>
+            <div class="faq-answer" id="answer5">Sim, dependendo do seu plano, você pode usar o serviço em múltiplos dispositivos simultaneamente.</div>
+        </div>
+
+        <!-- Seção de Reclamações -->
+        <div class="reclamacao-section">
+            <h2>Deixe sua Reclamação</h2>
+            <form action="#" method="post">
+                <label for="reclamacao">Escreva sua reclamação abaixo:</label>
+                <textarea id="reclamacao" name="reclamacao" placeholder="Descreva o problema que você enfrentou"></textarea>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Enviar Reclamação</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(answerId) {
+            var answer = document.getElementById('answer' + answerId);
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>

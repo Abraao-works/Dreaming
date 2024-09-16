@@ -1,12 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dreaming</title>
+    <header>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dreaming</title>
+        <link rel="stylesheet" href="pgindex.css">
+        <!--Imagem ico com qualidade da logo necessária-->
+        <link rel="shortcut icon" href="imagens/dreamingico.ico" type="image/x-icon">
+
+        <!--Barra de navegação vertical esquerda-->
+        <nav class="barranav">
+            <div class="nav-logo">
+                <img src="imagens/2-removebg-preview 1.png" alt="dreaminglogo">
+            </div>
+            <ul class="nav-list">
+                <li class="tag">Menu</li>
+                <li><a href="paghome.html" rel="next"><img
+                            src="https://www.unhcr.org/spotlight/wp-content/uploads/sites/55/2021/05/Icon-test-House-white.png"
+                            alt="Início"> Home</a></li>
+                <li><a href="#services"><img
+                            src="https://www.pngkey.com/png/full/87-872187_lupa-search-icon-white-png.png"
+                            alt="discover"> Discover</a></li>
+
+                <li class="tag">Library</li>
+                <li><a href="recent.pag"><img
+                            src="https://static-00.iconduck.com/assets.00/recent-icon-2048x1853-pffurvy9.png"
+                            alt="recent"> Recent</a></li>
+                <li><a href="pagtoprated.html"><img src="imagens/Top Rated.png" alt="toprated" prev="next">Top Rated</a>
+                </li>
+                <li><a href=""><img src="imagens/Downloaded.png" alt="">Downloaded</a></li>
+                <li><a href="pagplaylists.html"><img src="imagens/Playlists.png" alt="">Playlists</a></li>
+                <li><a href=""><img src="imagens/Watchlist.png" alt="">Watchlist</a></li>
+
+                <li class="tag">General</li>
+                <li><a href="pagconfigurações.html"><img src="imagens/Settings.png" alt="">Settings</a></li>
+                <li class="logout"><a href=""><img src="imagens/Log Out.png" alt="">Logtout</a></li>
+            </ul>
+        </nav>
+        <!--Barra de pesquisa-->
+        <form action="/search" class="barrapesquisa">
+            <label for="search"></label>
+            <input type="search" name="series" id="search" placeholder="Pesquisar">
+        </form>
+
+        <!-- Imagem de perfil e menu suspenso -->
+        <div class="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/5953/5953496.png" alt="Perfil" class="profile-img"
+                id="profile-button">
+            <div class="profile-menu" id="profile-menu">
+                <ul>
+                    <li><a href="gerenciarperfil.html">Gerenciar Contas</a></li>
+                    <li><a href="#">Minha Conta</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="barra-horizontal">
+            <a href="" class="barra-item">Movies</a>
+            <a href="" class="barra-item">Tv Shows</a>
+            <a href="" class="barra-item">Anime</a>
+        </div>
+    </header>
 </head>
+
 <body>
-    <h1>BEm vindo a Deaming</h1>
-    
+    <!--Carrosel do meio-->
+    <div class="slider">
+        <div class="slides">
+            <!--Radio bottons-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <!--Slide images-->
+            <div class="slide first">
+                <img src="imagens/the crown-edited.jpg" alt="the crown">
+            </div>
+            <div class="slide">
+                <img src="https://comic-watch.com/wp-content/uploads/2021/04/unnamed-2021-04-29t145010-003.jpg"
+                    alt="invicible">
+            </div>
+            <div class="slide">
+                <img src="https://i.ytimg.com/vi/i4RR9SThPoo/maxresdefault.jpg" alt="cariani">
+            </div>
+            <div class="slide">
+                <img src="https://blog.nxfacil.com.br/wp-content/uploads/2017/03/breaking_bad-nxfacil-1.jpg"
+                    alt="Breaking bad">
+            </div>
+            <!--Navigation auto-->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+    <h2 class="TinyMoviez">Popular on TinyMoviez</h2>
+    <!--Imagens abaixo do carrosel-->
+    <div class="imghorizontal">
+        <div class="card">
+            <img src="https://br.web.img2.acsta.net/pictures/21/05/12/17/18/2995518.jpg" alt="Loki">
+            <p class="descricao">Loki - Uma série da Marvel sobre o Deus da Trapaça.</p>
+            <a href="#" class="link-playlist">Adicionar à Playlist</a> | <a href="#" class="link-assistir">Assistir
+                Agora</a>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST9RFDKe2Rck8Igsya9vaaI3kGk3rlPw-UsQ&s"
+                alt="stranger things">
+            <p class="descricao">Stranger Things - Um grupo de amigos descobre segredos sobrenaturais ao buscar um
+                garoto desaparecido na cidade de Hawkins.</p>
+            <a href="#" class="link-playlist">Adicionar à Playlist</a> | <a href="#" class="link-assistir">Assistir
+                Agora</a>
+        </div>
+        <div class="card">
+            <img src="https://s2-techtudo.glbimg.com/QDIYAODrGD6Wx6lO5ALZoplvQJw=/0x0:1200x800/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/w/q/GQtAzUSC23yGNHAaG36A/8641cd99-093f-4f85-9a26-388494eb3a7f.jpg"
+                alt="Rick and Morty">
+            <p class="descricao">Rick and Morty - Aventura animada de um cientista e seu neto.</p>
+            <a href="#" class="link-playlist">Adicionar à Playlist</a> |<a href="#" class="link-assistir">Assistir
+                Agora</a>
+        </div>
+    </div>
+
+    <script src="java.js"></script>
 </body>
+
 </html>
