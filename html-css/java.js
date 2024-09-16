@@ -11,3 +11,11 @@ document.addEventListener('click', function(event) {
         menu.style.display = 'none';
     }
 });
+function toggleAnswer(answerId) {
+    var answer = document.getElementById('answer' + answerId);
+    if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+    } else {
+        answer.style.display = 'block';
+    }
+}

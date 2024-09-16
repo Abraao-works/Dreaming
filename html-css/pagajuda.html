@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Home</title>
-    <link rel="stylesheet" href="pgindex.css">
-</head>
-
-<body>
-    <tbody>
-          <!--Barra de navegação vertical esquerda--> 
+    <title>Página de Ajuda</title>
+    <link rel="stylesheet" href="pagajuda.css">    
+        <!--Barra de navegação vertical esquerda--> 
         <nav class="barranav">
             <div class="nav-logo">
                 <img src="imagens/2-removebg-preview 1.png" alt="dreaminglogo">
@@ -23,7 +18,7 @@
                 <li><a href="#services"><img
                             src="https://www.pngkey.com/png/full/87-872187_lupa-search-icon-white-png.png"
                             alt="discover"> Discover</a></li>
-
+    
                 <li class="tag">Library</li>
                 <li><a href="recent.pag"><img
                             src="https://static-00.iconduck.com/assets.00/recent-icon-2048x1853-pffurvy9.png"
@@ -32,14 +27,14 @@
                 <li><a href=""><img src="imagens/Downloaded.png" alt="">Downloaded</a></li>
                 <li><a href=""><img src="imagens/Playlists.png" alt="">Playlists</a></li>
                 <li><a href="pagwatchlist.html"><img src="imagens/Watchlist.png" alt="">Watchlist</a></li>
-
+    
                 <li class="tag">General</li>
                 <li><a href="pagconfigurações.html"><img src="imagens/Settings.png" alt="">Settings</a></li>
                 <li class="logout"><a href=""><img src="imagens/Log Out.png" alt="">Logtout</a></li>
                 </a>
             </ul>
         </nav>
-
+    
         <!--Parte do perfil do usuário-->
         <div class="profile">
             <img src="https://cdn-icons-png.flaticon.com/512/5953/5953496.png" alt="Perfil" class="profile-img"
@@ -52,24 +47,44 @@
                 </ul>
             </div>
         </div>
-        <!--Página home-->
-        <div class="letrasbreakingbad">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Breaking_Bad_logo.svg" alt="letrasbreakingbad">
+    
+</head>
+<body>
+
+    <div class="container">
+        <h1>Página de Ajuda</h1>
+
+        <!-- Perguntas Frequentes -->
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(1)">O que é o serviço?</div>
+            <div class="faq-answer" id="answer1">Nosso serviço oferece uma plataforma de streaming com vários filmes e séries para você assistir onde e quando quiser.</div>
+
+            <div class="faq-question" onclick="toggleAnswer(2)">Como eu faço para alterar meu plano?</div>
+            <div class="faq-answer" id="answer2">Você pode alterar seu plano acessando a página de configurações do perfil e escolhendo um novo plano na seção de assinaturas.</div>
+
+            <div class="faq-question" onclick="toggleAnswer(3)">Quais formas de pagamento são aceitas?</div>
+            <div class="faq-answer" id="answer3">Aceitamos pagamentos com cartão de crédito, débito e também através de boleto bancário.</div>
+
+            <div class="faq-question" onclick="toggleAnswer(4)">Como posso cancelar minha assinatura?</div>
+            <div class="faq-answer" id="answer4">Para cancelar sua assinatura, acesse a página de configurações do perfil e selecione a opção de cancelamento na seção de gerenciamento de assinaturas.</div>
+
+            <div class="faq-question" onclick="toggleAnswer(5)">Posso usar o serviço em vários dispositivos?</div>
+            <div class="faq-answer" id="answer5">Sim, dependendo do seu plano, você pode usar o serviço em múltiplos dispositivos simultaneamente.</div>
         </div>
-        <div class="drescricaobreak"><p>Após ser diagnosticado com câncer, Walter White começa a fabricar metanfetamina para garantir o futuro de sua família, entrando em um mundo de crime e perigo</p></div>
-        <div class="brakingbadhome"><iframe width="560" height="315" src="https://www.youtube.com/embed/aBF8FGJRAlI?si=fEoeMiZ7HeyTTTjl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="breakingbadvideo"></iframe>
+
+        <!-- Seção de Reclamações -->
+        <div class="reclamacao-section">
+            <h2>Deixe sua Reclamação</h2>
+            <form action="#" method="post">
+                <label for="reclamacao">Escreva sua reclamação abaixo:</label>
+                <textarea id="reclamacao" name="reclamacao" placeholder="Descreva o problema que você enfrentou"></textarea>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Enviar Reclamação</button>
+                </div>
+            </form>
         </div>
-    <h1 class="emalta-home">Em alta na semana</h1>
-    <div class="imagenshome">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjEcIJUBrJE02uSDFdZbz3L5Gr_5-o-o_a_g&s" alt="invicible">
-        <img src="https://br.web.img2.acsta.net/pictures/19/07/10/20/01/2331295.jpg" alt="stranger things">
-        <img src="https://cloud.estacaonerd.com/wp-content/uploads/2021/09/08001707/Lucifer_S6_Main_Vertical_RGB_PT-BR.jpg" alt="lucifer">
-        <img src="https://s2-techtudo.glbimg.com/QDIYAODrGD6Wx6lO5ALZoplvQJw=/0x0:1200x800/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/w/q/GQtAzUSC23yGNHAaG36A/8641cd99-093f-4f85-9a26-388494eb3a7f.jpg" alt="rick and morty">
     </div>
-
-
-    </tbody>
-<script src="java.js"></script>
+    <script src="java.js"></script>
 </body>
-
 </html>
