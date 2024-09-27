@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist - Semelhante ao YouTube</title>
-    <link rel="stylesheet" href="pgplaylist2.css">
-      <!--Barra de navegação vertical esquerda-->
-      <nav class="barranav">
+    <link rel="stylesheet" href="pgindex.css">
+</head>
+<body class="corpo-playlist2">
+    <nav class="barranav">
         <div class="nav-logo">
             <img src="imagens/2-removebg-preview 1.png" alt="dreaminglogo">
         </div>
@@ -35,7 +36,6 @@
         </ul>
     </nav>
 
-    <!--Parte do perfil do usuário-->
     <div class="profile">
         <img src="https://cdn-icons-png.flaticon.com/512/5953/5953496.png" alt="Perfil" class="profile-img"
             id="profile-button">
@@ -46,26 +46,23 @@
                 <li><a href="pagajuda.html">Ajuda</a></li>
             </ul>
         </div>
+
+
     </div>
-</head>
-<body>
-    <div class="container">
-        <!-- Área do Reprodutor de Vídeo -->
-        <div class="video-player">
+    <div class="container-playlist2">
+        <div class="video-player-playlist2">
             <iframe width="350" height="260" src="https://www.youtube.com/embed/VQlBa5gdwV4?si=OmJnFkBaJhSszz12" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </video>
         </div>
-        
-        <!-- Lista de Reprodução -->
-        <div class="playlist">
-            <div class="playlist-item" onclick="playVideo('video1.mp4')">
+        <div class="playlist2">
+            <div class="playlist2-item" onclick="playVideo('video1.mp4')">
                 <img src="imagens/i saw devil.png" alt="Thumbnail 1">
                 <div>
                     <div class="title">Vídeo 1</div>
                     <div class="channel">Canal 1</div>
                 </div>
             </div>
-            <div class="playlist-item" onclick="playVideo('video2.mp4')">
+            <div class="playlist2-item" onclick="playVideo('video2.mp4')">
                 <img src="imagens/terrifier2.png" alt="Thumbnail 2">
                 <div>
                     <div class="title">Vídeo 2</div>
