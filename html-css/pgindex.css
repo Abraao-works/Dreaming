@@ -1,9 +1,107 @@
 @charset "|UTF-8";
+/*Página log*/
+.corpolog {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.logodream {
+  margin-bottom: -39px; 
+
+}
+
+.logodream img {
+  width: 200px;
+  height: auto;
+  
+}
+
+.login-container {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  text-align: center;
+  z-index: 1000;
+  height: 270px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.input-box {
+  margin-bottom: 15px;
+
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-box input {
+  width: calc(100% - 20px); 
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #333;
+  color: white;
+  width: calc(100% - 20px);
+}
+
+.login-button {
+  width: calc(100% - 20px); 
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  width: calc(100% - 20px);
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.social-links a:hover {
+  color: #ccc;
+}
+* .social-icon{
+  text-decoration: none;
+  color: white;
+}
+* .social-icon:hover{
+  text-decoration: none;
+}
+
+/*Página index*/
 body{
     background-color: #16181E;
     overflow-y: auto;
 }
-  /* Barra de pesquisa */
   .barrapesquisa {
     position: absolute; 
     top: 10px; 
@@ -34,7 +132,6 @@ body{
 .barrapesquisa input[type="search"]::placeholder {
     color: #ffffff; 
 }
-/* Imagem de perfil */
 .profile {
   position: absolute;
   top: 10px;
@@ -50,7 +147,6 @@ position: fixed;
   border-radius: 50%; 
   position: absolute ;
 }
-/* Menu suspenso */
 .profile-menu {
 position: fixed;
   display: none;
@@ -88,7 +184,6 @@ position: fixed;
   background-color: #00B9AE;
   border-radius: 5px;
 }
-/*barra de navegação esquerda */
 .barranav {
     position: fixed; 
     top: 0; 
@@ -123,6 +218,9 @@ position: fixed;
     border-radius: 5px; 
     transition: background-color 0.3s, color 0.3s; 
 }
+.nav-list a:hover{
+  text-decoration: none;
+}
 .nav-list img {
     width: 20px;
     height: 20px; 
@@ -156,7 +254,6 @@ position: fixed;
     padding: 0;
     margin-bottom: 0px;
 }
-/*Barra horizontal*/
 .barra-horizontal{
     position: absolute;
     top: 40;
@@ -178,7 +275,6 @@ position: fixed;
 .barra-item:hover{
     color: #00B9AE;
 }
-/*Carrosel*/
 .slider{
     margin: 0 auto;
     width: 600px;
@@ -281,7 +377,6 @@ position: fixed;
   text-align: center; 
   margin-right: 20px;
 }
-
 .card img {
   width: 200px;
   height: 300px;
@@ -303,6 +398,7 @@ a {
 a:hover {
   text-decoration: underline; 
 }
+
 /*Pagina Top rated*/
 .topvistos{
   position: absolute;
@@ -341,6 +437,7 @@ a:hover {
   color: white;
   top: 330px;
 }
+
 /*Página home*/
 .brakingbadhome{
   position: absolute;
@@ -458,4 +555,78 @@ a:hover {
   top: 120px;
   left: 210px;
   gap: 20px;
+}
+
+/*Página Playlist*/
+.corpoplaylists {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #141414;
+}
+.header-pgplaylists {
+  color: white;
+  padding: 10px 20px; 
+  display: flex;
+  align-items: center;
+}
+.h1-pgplaylists {
+  margin: 0;
+  font-size: 26px; 
+  display: flex;
+  position:absolute;
+  top: 30px;
+  left: 210px;
+  color: white;
+}
+.container-pgplaylists {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  left: 190px;
+  position: absolute;
+  top: 60px;
+  gap: 40px;
+}
+.playlist {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #a8a4a4;
+
+}
+.playlist a{
+  text-decoration: none;
+}
+.playlist a:hover{
+  text-decoration: none;
+}
+.playlist img {
+  width: 150px;
+  height: 84px;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+.playlist-info {
+  flex-grow: 1;
+}
+.playlist-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: white;
+}
+.playlist-info h3:hover{
+  color: #00B9AE;
+
+}
+.playlist-info p {
+  color: #555;
+  margin: 5px 0;
+}
+.playlist-info span {
+  color: #888;
+  font-size: 14px;
 }
